@@ -22,6 +22,11 @@ body {
     margin-left: 35px
 }
 
+.logo1 {
+    width: 70px;
+    height: 70px;
+}
+
 .image {
     width: 360px;
     height: 280px
@@ -147,12 +152,6 @@ input::-webkit-input-placeholder {
     padding: 8px 12px !important;
 }
 
-.input-group {
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
-}
-
 .main-center {
     margin-top: 30px;
     margin: 0 auto;
@@ -166,7 +165,8 @@ input::-webkit-input-placeholder {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
 }
 
-span.input-group-addon i {
+span.input-group-addon {
     color: #009edf;
     font-size: 17px;
+    align-items: center;
 }
