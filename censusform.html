@@ -40,7 +40,7 @@
         </div>
         <div class="line1" style="margin-left: 25%"></div>
         <div class="container" style="padding: 30px 0px 30px 0px;">
-          <form>
+          <form method="POST" action="storeImage.php">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="fmname">Family Head Name:</label>
@@ -144,7 +144,23 @@
             </label>
             </div>
           </div>
+          <div class="form-row">
+            <div class="col-md-6">
+                <div id="my_camera"></div>
+                <br/>
+                <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                <input type="hidden" name="image" class="image-tag">
+            </div>
+            <div class="col-md-6">
+                <div id="results">Your captured image will appear here...</div>
+            </div>
+            <div class="col-md-12 text-center">
+                <br/>
+                <button class="btn btn-success">Attach</button>
+            </div>
+        </div>
           
+        <br><hr>
           <div class="row justify-content-center align-content-center">
             <button type="submit" class="btn btn-primary" >Submit</button>
           </div>
@@ -159,6 +175,24 @@
         </div>
       </div>
     </div>
+
+    <script language="JavaScript">
+      Webcam.set({
+          width: 490,
+          height: 390,
+          image_format: 'jpeg',
+          jpeg_quality: 90
+      });
+    
+      Webcam.attach( '#my_camera' );
+    
+      function take_snapshot() {
+          Webcam.snap( function(data_uri) {
+              $(".image-tag").val(data_uri);
+              document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+          } );
+      }
+  </script>
 
     <script
       type="text/javascript"
