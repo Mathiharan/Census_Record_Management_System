@@ -12,6 +12,7 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
+    "aws-amplify": "^4.3.2",
     "bootstrap": "^4.6.0",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
